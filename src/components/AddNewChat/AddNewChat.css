@@ -1,0 +1,8 @@
+.addNewChat {
+  display: flex;
+  background: lightgreen;
+}
+
+.MuiButtonBase-root {
+  flex-grow: 1;
+}

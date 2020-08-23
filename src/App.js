@@ -7,7 +7,6 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      <h4>Chat room</h4>
       <div className="app__body">
         <SideBar />
         <ChatWindow />

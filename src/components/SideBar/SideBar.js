@@ -2,6 +2,8 @@ import React from 'react'
 
 import { UserInfo } from '../UserInfo/UserInfo'
 import { Search } from '../Search/Search'
+import { ChatList } from '../ChatList/ChatList'
+import { AddNewChat } from '../AddNewChat/AddNewChat'
 
 import './SideBar.css'
 
@@ -13,8 +15,10 @@ export const SideBar = () => {
       </div>
 
       <div className="sidebar__body">
+        <AddNewChat />
         <Search />
-        {/* <Chat /> */}
+        <hr />
+        <ChatList />
       </div>
     </div>
   )
