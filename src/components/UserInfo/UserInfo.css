@@ -1,0 +1,11 @@
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userInfo__right {
+  display: flex;
+  width: 8vw;
+  align-items: center;
+  justify-content: space-between;
+}

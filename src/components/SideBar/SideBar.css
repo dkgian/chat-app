@@ -4,6 +4,7 @@
 }
 
 .sidebar__header {
-  background: brown;
+  background: whitesmoke;
   height: 10vh;
+  padding: 5px;
 }
