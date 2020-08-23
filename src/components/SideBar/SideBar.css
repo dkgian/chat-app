@@ -1,0 +1,9 @@
+.sidebar {
+  background: blueviolet;
+  flex: 0.3;
+}
+
+.sidebar__header {
+  background: brown;
+  height: 10vh;
+}

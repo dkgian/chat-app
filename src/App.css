@@ -2,7 +2,17 @@
   margin: 0px;
 }
 
-body {
+.app {
   display: grid;
   place-items: center;
+  background: lightcyan;
+  height: 100vh;
+}
+
+.app__body {
+  display: flex;
+  background: lightyellow;
+  height: 90vh;
+  width: 80vw;
+  box-shadow: 2px 5px 10px 5px grey;
 }
