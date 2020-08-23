@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { UserInfo } from '../UserInfo/UserInfo'
+import { Search } from '../Search/Search'
 
 import './SideBar.css'
 
@@ -11,7 +12,10 @@ export const SideBar = () => {
         <UserInfo />
       </div>
 
-      <div className="sidebar__body">body</div>
+      <div className="sidebar__body">
+        <Search />
+        {/* <Chat /> */}
+      </div>
     </div>
   )
 }
