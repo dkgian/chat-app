@@ -1,0 +1,12 @@
+.chatItem {
+  display: flex;
+  border: 1px solid gray;
+}
+
+.chatItem > * {
+  margin: 10px;
+}
+
+.chatItem__room {
+  font-size: x-large;
+}
