@@ -13,9 +13,26 @@
 }
 
 .chatWindow__footer {
+  display: flex;
   position: absolute;
   bottom: 0;
   background: burlywood;
   height: 8vh;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-grow: 1;
+}
+
+svg {
+  padding: 10px;
+}
+
+.MuiInputBase-root {
+  display: flex;
+  flex-grow: 1;
 }

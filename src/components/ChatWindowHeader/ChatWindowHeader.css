@@ -1,6 +1,5 @@
 .chatWindowHeader {
   display: flex;
-  align-content: stretch;
   align-items: center;
 }
 
