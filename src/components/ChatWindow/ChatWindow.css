@@ -1,15 +1,18 @@
-.chatwindow {
+.chatWindow {
   position: relative;
   background: lime;
   flex-grow: 1;
 }
 
-.chatwindow__header {
-  background: yellow;
+.chatWindow__header {
+  display: grid;
+  background: whitesmoke;
   height: 10vh;
+  border-left: 0.5px solid yellowgreen;
+  padding: 5px;
 }
 
-.chatwindow__footer {
+.chatWindow__footer {
   position: absolute;
   bottom: 0;
   background: burlywood;

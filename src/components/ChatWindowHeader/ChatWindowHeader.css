@@ -1,0 +1,23 @@
+.chatWindowHeader {
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+}
+
+.chatWindowHeader__left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.chatWindowHeader__right {
+  display: flex;
+  flex: 0.4;
+  justify-content: space-around;
+}
+
+.chatWindowHeader__roomInfo {
+  display: inline-block;
+  padding: 20px;
+}
