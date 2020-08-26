@@ -4,9 +4,7 @@
 }
 
 .chatItem > * {
+  color: black;
   margin: 10px;
 }
 
-.chatItem__room {
-  font-size: x-large;
-}

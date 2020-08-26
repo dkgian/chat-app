@@ -3,17 +3,20 @@ import React from 'react'
 import { Avatar } from '@material-ui/core'
 
 import './ChatItem.css'
+import { Link } from 'react-router-dom'
 
-export const ChatItem = ({ room }) => {
+export const ChatItem = ({ room, id }) => {
   return (
-    <div className="chatItem">
-      <div className="chatItem__avatar">
-        <Avatar />
+    <Link to={`/${id}`}>
+      <div className="chatItem">
+        <div className="chatItem__avatar">
+          <Avatar />
+        </div>
+        <div className="chatItem__content">
+          <div className="chatItem__room">{room.name}</div>
+          <div className="chatItem__last">{id}</div>
+        </div>
       </div>
-      <div className="chatItem__content">
-        <div className="chatItem__room">{room.name}</div>
-        <div className="chatItem__last">This is last msg</div>
-      </div>
-    </div>
+    </Link>
   )
 }

@@ -21,7 +21,7 @@ export const ChatList = () => {
   return (
     <div>
       {rooms.map(({ id, room }) => (
-        <ChatItem key={id} room={room} />
+        <ChatItem key={id} room={room} id={id} />
       ))}
     </div>
   )
