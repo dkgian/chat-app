@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 
-import { ChatWindowHeader } from '../ChatWindowHeader/ChatWindowHeader'
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import MicIcon from '@material-ui/icons/Mic'
 import { Input } from '@material-ui/core'
 import IconButton from '@material-ui/core/IconButton'
 import SendIcon from '@material-ui/icons/Send'
+
+import { ChatWindowHeader } from '../ChatWindowHeader/ChatWindowHeader'
+import { Messages } from '../Messages/Messages'
 
 import './ChatWindow.css'
 
@@ -26,7 +28,9 @@ export const ChatWindow = () => {
         <ChatWindowHeader />
       </div>
 
-      <div className="chatWindow__body">body</div>
+      <div className="chatWindow__body">
+        <Messages />
+      </div>
 
       <div className="chatWindow__footer">
         <IconButton size="small">
