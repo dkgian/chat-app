@@ -4,6 +4,7 @@ import SearchIcon from '@material-ui/icons/Search'
 
 import db from '../../firebase'
 import { ChatItem } from '../ChatItem/ChatItem'
+
 import './ChatList.css'
 
 export const ChatList = () => {
@@ -22,10 +23,13 @@ export const ChatList = () => {
   }, [])
 
   return (
-    <div>
+    <div className="chatList">
       <div className="search">
         <SearchIcon />
-        <Input placeholder="Search..." onChange={(e) => setSearchKey(e.target.value)} />
+        <Input
+          placeholder="Search..."
+          onChange={(e) => setSearchKey(e.target.value)}
+        />
       </div>
       {rooms
         .filter(({ room: { name } }) => name.includes(searchKey))

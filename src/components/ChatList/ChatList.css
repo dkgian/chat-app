@@ -12,3 +12,7 @@
 .MuiInput-input {
   flex-grow: 1;
 }
+
+.chatList {
+  cursor: pointer;
+}
