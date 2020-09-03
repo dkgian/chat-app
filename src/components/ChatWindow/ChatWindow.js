@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import firebase from 'firebase'
 import { useParams } from 'react-router-dom'
 
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
@@ -41,7 +42,13 @@ export const ChatWindow = () => {
   const sendMessage = () => (e) => {
     e.preventDefault()
 
-    // TODO: implement send msg function
+    const newMessage = {
+      message: input,
+      sender: 'sample man',
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }
+
+    db.collection('rooms').doc(roomId).collection('messages').add(newMessage)
 
     setInput('')
   }
