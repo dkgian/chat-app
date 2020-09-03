@@ -3,13 +3,16 @@ import React from 'react'
 import { SideBar, ChatWindow } from './components'
 
 import './App.css'
+import { Route } from 'react-router-dom'
 
 function App() {
   return (
     <div className="app">
       <div className="app__body">
         <SideBar />
-        <ChatWindow />
+        <Route path="/:roomId">
+          <ChatWindow />
+        </Route>
       </div>
     </div>
   )

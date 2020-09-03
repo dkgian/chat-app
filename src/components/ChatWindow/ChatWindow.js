@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
 import MicIcon from '@material-ui/icons/Mic'
@@ -10,26 +11,49 @@ import { ChatWindowHeader } from '../ChatWindowHeader/ChatWindowHeader'
 import { Messages } from '../Messages/Messages'
 
 import './ChatWindow.css'
+import db from '../../firebase'
 
 export const ChatWindow = () => {
   const [input, setInput] = useState('')
+  const [roomName, setRoomName] = useState('')
+  const [messages, setMessages] = useState([])
+
+  const { roomId } = useParams()
 
   const updateInputField = () => (e) => setInput(e.target.value)
 
+  useEffect(() => {
+    if (roomId) {
+      db.collection('rooms')
+        .doc(roomId)
+        .onSnapshot((snapshot) => setRoomName(snapshot.data().name))
+
+      db.collection('rooms')
+        .doc(roomId)
+        .collection('messages')
+        .orderBy('timestamp', 'asc')
+        .onSnapshot((snapshot) =>
+          setMessages(snapshot.docs.map((doc) => doc.data()))
+        )
+    }
+  }, [roomId])
+
   const sendMessage = () => (e) => {
     e.preventDefault()
-    console.log(input)
+
+    // TODO: implement send msg function
+
     setInput('')
   }
 
   return (
     <div className="chatWindow">
       <div className="chatWindow__header">
-        <ChatWindowHeader />
+        <ChatWindowHeader roomName={roomName} />
       </div>
 
       <div className="chatWindow__body">
-        <Messages />
+        <Messages messages={messages} />
       </div>
 
       <div className="chatWindow__footer">

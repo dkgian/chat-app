@@ -2,16 +2,16 @@ import React from 'react'
 
 import './Messages.css'
 
-const Message = () => {
-  return <div className="message"> <p>This is a message</p></div>
-}
-
-export const Messages = () => {
+export const Messages = ({ messages }) => {
   return (
     <div className="messages">
-      <Message />
-      <Message />
-      <Message />
+      {messages.map(({ timestamp, message }) => { 
+        return (
+          <section key={timestamp}>
+            <div className="message">{message}</div>
+          </section>
+        ) 
+      })}
     </div>
   )
 }

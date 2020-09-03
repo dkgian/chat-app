@@ -7,14 +7,14 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 
 import './ChatWindowHeader.css'
 
-export const ChatWindowHeader = () => {
+export const ChatWindowHeader = ({ roomName }) => {
   return (
     <div className="chatWindowHeader">
       <div className="chatWindowHeader__left">
         <Avatar />
 
         <div className="chatWindowHeader__roomInfo">
-          <div className="chatWindowHeader__room">Room 9</div>
+          <div className="chatWindowHeader__room">{roomName}</div>
 
           <div className="chatWindowHeader__lastSeen">Last seen yesterday!</div>
         </div>
