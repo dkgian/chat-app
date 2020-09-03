@@ -5,10 +5,11 @@ import './Messages.css'
 export const Messages = ({ messages }) => {
   return (
     <div className="messages">
-      {messages.map(({ timestamp, message }) => { 
+      {messages.map(({ timestamp, message, sender }) => { 
         return (
           <section key={timestamp}>
-            <div className="message">{message}</div>
+            <div className="messages__sender">{sender}</div>
+            <div className="messages__message">{message}</div>
           </section>
         ) 
       })}

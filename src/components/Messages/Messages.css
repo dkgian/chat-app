@@ -1,7 +1,7 @@
 .messages {
   display: grid;
 }
-.message {
+.messages__message {
   background: lightgoldenrodyellow;
   width: fit-content;
   margin: 10px;
@@ -10,6 +10,9 @@
   box-shadow: 1px 1px 4px 1px grey;
 }
 
-.message__my {
-  place-self: flex-end;
+.messages__sender {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-bottom: -10px;
 }
